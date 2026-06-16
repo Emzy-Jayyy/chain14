@@ -1,0 +1,85 @@
+/* General Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F5F0;
+    color: #1F1F1F;
+    margin: 0;
+}
+
+/* Restaurant Name */
+
+header {
+    background-color: #1F1F1F;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Hero Section */
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+    background-color: #D4A017;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #1F1F1F;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Sections */
+
+.about,
+.menu,
+.contact {
+    background-color: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* About Section */
+
+.about img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Menu */
+
+.menu-category {
+    margin-bottom: 20px;
+}
+
+.menu ul {
+    padding-left: 20px;
+}
+
+/* Contact */
+
+.contact p {
+    margin: 10px 0;
+}
