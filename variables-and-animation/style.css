@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+    color:#333;
+}
+
+section{
+    padding:60px 20px;
+}
+
+.hero{
+    text-align:center;
+    min-height:60vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:30px;
+}
+
+/* -------------------------------- */
+/* TRANSITION DEMO */
+/* -------------------------------- */
+
+.button-group{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.snap-btn,
+.smooth-btn{
+    padding:15px 30px;
+    border:none;
+    cursor:pointer;
+}
+
+/* Instant */
+
+.snap-btn:hover{
+    background:red;
+    color:white;
+}
+
+/* Smooth */
+
+.smooth-btn{
+    background:#1976d2;
+
+    transition:
+    background-color .3s ease,
+    transform .3s ease;
+}
+
+.smooth-btn:hover{
+    background:#0d47a1;
+    color:white;
+
+    transform:translateY(-5px);
+}
+
+/* -------------------------------- */
+/* PULSE ANIMATION */
+/* -------------------------------- */
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.cta-button{
+
+    padding:16px 32px;
+    border:none;
+
+    background:#1976d2;
+    color:white;
+
+    cursor:pointer;
+
+    animation:
+    pulse 2s ease-in-out infinite;
+}
+
+/* -------------------------------- */
+/* HERO SLIDE IN */
+/* -------------------------------- */
+
+@keyframes slideIn{
+
+    from{
+        transform:translateX(-100%);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+.hero-title{
+
+    opacity:0;
+
+    animation:
+    slideIn 1s ease-out;
+
+    animation-fill-mode:forwards;
+}
+
+/* -------------------------------- */
+/* TRANSFORM DEMO */
+/* -------------------------------- */
+
+.transform-grid{
+
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.box{
+
+    width:150px;
+    height:150px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#1976d2;
+    color:white;
+
+    transition:.3s;
+}
+
+.translate-box:hover{
+    transform:translateX(40px);
+}
+
+.scale-box:hover{
+    transform:scale(1.2);
+}
+
+.rotate-box:hover{
+    transform:rotate(15deg);
+}
+
+/* -------------------------------- */
+/* TIMING FUNCTION DEMO */
+/* -------------------------------- */
+
+.timing-demo{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.ball{
+
+    width:120px;
+    padding:10px;
+
+    background:#1976d2;
+    color:white;
+
+    position:relative;
+
+    animation:
+    moveBall 3s infinite;
+}
+
+.linear{
+    animation-timing-function:linear;
+}
+
+.ease{
+    animation-timing-function:ease;
+}
+
+.ease-in{
+    animation-timing-function:ease-in;
+}
+
+.ease-out{
+    animation-timing-function:ease-out;
+}
+
+@keyframes moveBall{
+
+    from{
+        left:0;
+    }
+
+    to{
+        left:300px;
+    }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Areas</title>
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: grid;
+        height: 100vh;
+        gap: 5px;
+
+        grid-template-columns: 80px 1fr 80px;
+        grid-template-rows: 80px 1fr 80px;
+      }
+
+      header {
+        background-color: tomato;
+        grid-column: 1 / 4;
+        display: flex;
+        align-items: center;
+      }
+
+      aside {
+        background-color: steelblue;
+    }
+
+      main {
+        background-color: seagreen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+      footer {
+        background-color: orange;
+        grid-column: 1 / 4;
+        display: flex;
+        justify-content: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <aside>Sidebar</aside>
+      <main>Main Content</main>
+      <aside>Sidebar</aside>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>

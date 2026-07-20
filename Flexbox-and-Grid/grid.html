@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        .container{
+            width:1200px;
+            height:200px;
+            background-color:bisque;
+            border:3px solid black;
+
+            display: grid;
+            gap: 5px;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: 20px 1fr 1fr 40px;
+        }
+
+        .item{
+            background-color:purple;
+            color:white;
+            font-weight:bold;
+            text-align:center;
+        }
+
+        /* .item1{
+            background-color:steelblue;
+        }
+
+        .item2{
+            background-color:seagreen;
+        }
+
+        .item3{
+            background-color:orange;
+        }
+
+        .item4{
+            background-color:purple;
+        }
+
+        .item5{
+            background-color:yellow;
+        }
+
+        .item6{
+            background-color:gray;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item2">3</div>
+        <div class="item item2">4</div>
+        <div class="item item2">5</div>
+        <div class="item item2">6</div>
+        <div class="item item2">7</div>
+        <div class="item item2">8</div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="item item5">5</div> -->
+    <!-- <div class="item item6">6</div> -->
+    <!-- <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+    <div class="item">12</div> -->
+</body>
+</html>

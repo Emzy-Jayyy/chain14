@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+
+      div {
+        display: flex;
+        position: relative;
+        width: 30%;
+      }
+
+      input {
+        width: 100%;
+        height: 50px;
+        border-radius: 20px;
+        border: 2px solid #ccc;
+      }
+
+      span {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+
+      .article-1 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: yellow;
+        margin-bottom: 10px;
+        /* top: 500px; */
+      }
+
+      .article-2 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: green;
+        margin-bottom: 10px;
+      }
+
+      .article-3 {
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        background-color: blue;
+        left: 0px;
+        top: 0px;
+      }
+
+      .box-1 {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        /* position: absolute; */
+        /* top:300px; */
+      }
+
+      .box-2 {
+        width: 50px;
+        height: 50px;
+        background-color: purple;
+        position: absolute;
+        left: 80px;
+        top: 0px;
+      }
+
+      header{
+        position: fixed;
+        top: 0px;      
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav></nav>
+    </header>
+    <!-- <div>
+      <input type="text" />
+      <span><i class="fa-solid fa-magnifying-glass"></i></span>
+    </div> -->
+
+    <article class="article-1">
+        <div class="box-1"></div>
+    </article>
+    
+    <article class="article-2">
+        <div class="box-2">
+            <div class="grandchild"></div>
+        </div>
+    </article>
+    
+    <article class="article-3">
+        <div class="box-1"></div>
+    </article>
+    <p>Hello world</p>
+  </body>
+</html>

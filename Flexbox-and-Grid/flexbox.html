@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Concepts Demo</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            padding:20px;
+        }
+
+        .container{
+            width:900px;
+            height:300px;
+            border:3px solid black;
+
+            display:flex;
+            gap:10px;
+
+            /* Makes align-self easier to see */
+            align-items:center;
+        }
+
+        .item{
+            background:tomato;
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+            text-align:center;
+            padding:20px;
+        }
+
+        /* Demonstrates flex-basis */
+        .item1{
+            flex-basis:150px;
+            background:steelblue;
+        }
+
+        /* Demonstrates flex-grow */
+        .item2{
+            flex-basis:150px;
+            flex-grow:2;
+            background:seagreen;
+        }
+
+        /* Demonstrates flex-grow */
+        .item3{
+            flex-basis:150px;
+            flex-grow:1;
+            background:orange;
+        }
+
+        /* Demonstrates align-self */
+        .item4{
+            flex-basis:150px;
+            background:purple;
+            align-self:flex-start;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Flexbox Properties Demo</h2>
+
+    <div class="container">
+        <div class="item item1">Basis 150px</div>
+
+        <div class="item item2">
+            Grow 2
+        </div>
+
+        <div class="item item3">
+            Grow 1
+        </div>
+
+        <div class="item item4">
+            Align Self
+        </div>
+    </div>
+
+</body>
+</html>
