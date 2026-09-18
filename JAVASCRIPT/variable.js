@@ -15,6 +15,7 @@ console.log(age);
 console.log(isStudent);
 console.log(score);
 
+
 // THE 7 JAVASCRIPT DATA TYPES
 
 // 1. String - text always in quotes
@@ -47,6 +48,8 @@ const user = {
   name: "Alice",
   age: 24,
   isStudent: true,
+  skills: []
 };
+
 
 const greet = function() {}

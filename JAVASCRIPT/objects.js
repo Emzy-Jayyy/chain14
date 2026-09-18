@@ -11,6 +11,9 @@ const developer = {
     }
 };
 
+developer.age = 30
+
+
 // ACCESSING PROPERTIES --- two ways
 console.log(developer.firstName);   // (dot notation)
 console.log(developer['lastName']); // (bracket notation)

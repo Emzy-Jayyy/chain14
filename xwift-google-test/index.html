@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xwift Google Login Test</title>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <h1>Xwift Google Login Test</h1>
+
+    <div id="google-signin"></div>
+
+    <h2>ID Token</h2>
+    <textarea
+      id="token"
+      rows="12"
+      cols="100"
+      readonly
+      placeholder="Your Google ID token will appear here"
+    ></textarea>
+
+    <h2>Xwift Response</h2>
+    <pre id="result"></pre>
+
+    <script>
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id:
+            "1090354625744-fcnc4q09iv0ceu0497gq448ei2gmnk02.apps.googleusercontent.com",
+          callback: handleCredentialResponse,
+        });
+
+        google.accounts.id.renderButton(
+          document.getElementById("google-signin"),
+          {
+            theme: "outline",
+            size: "large",
+            text: "signin_with",
+          },
+        );
+      };
+
+      async function handleCredentialResponse(response) {
+        document.getElementById("token").value = response.credential;
+
+        const resultElement = document.getElementById("result");
+
+        try {
+          const apiResponse = await fetch(
+            "http://localhost:3000/api/v1/auth/google",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                idToken: response.credential,
+              }),
+            },
+          );
+
+          const body = await apiResponse.json();
+
+          const safeBody = apiResponse.ok
+            ? {
+                user: body.user,
+              }
+            : body;
+
+          resultElement.textContent = JSON.stringify(
+            {
+              status: apiResponse.status,
+              body: safeBody,
+            },
+            null,
+            2,
+          );
+        } catch (error) {
+          resultElement.textContent = String(error);
+        }
+      }
+    </script>
+  </body>
+</html>

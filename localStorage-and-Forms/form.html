@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f4f6f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      form {
+        width: 380px;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 14px;
+        margin-top: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: 0.3s;
+        font-size: 16px;
+      }
+
+      input:focus {
+        border-color: royalblue;
+        box-shadow: 0 0 8px rgba(65, 105, 225, 0.25);
+      }
+
+      button {
+        width: 100%;
+        margin-top: 25px;
+        padding: 14px;
+        background: royalblue;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 17px;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #224dc7;
+      }
+
+      .error {
+        display: block;
+        color: crimson;
+        font-size: 14px;
+        margin-top: 5px;
+        min-height: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="signupForm">
+      <input type="text" id="email" placeholder="Email" />
+      <span id="emailError" class="error"></span>
+
+      <input type="password" id="password" placeholder="Password" />
+
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm Password"
+      />
+
+      <span id="passwordError" class="error"></span>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="./form.js"></script>    
+  </body>
+</html>
