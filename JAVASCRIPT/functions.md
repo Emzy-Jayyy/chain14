@@ -403,3 +403,11 @@ There's another important idea.
 ## Variables created inside a function are generally only available inside that function.
 
 For example:
+
+function () {}
+
+() => {} //Arrow function
+
+function greet() {}
+
+const greet = () => {}
