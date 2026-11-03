@@ -81,7 +81,7 @@ Result:
 
 <!-- ----------------- -->
 
-## 2️⃣ Assignment Operators
+## 2️⃣ Assignment Operators ( = )
 
 ## Now let's imagine you have a box.
 
@@ -198,6 +198,8 @@ true
 ===  strictly equal to
 !==  not strictly equal to
 
+
+
 ## For example:
 
 10 > 5       // true
@@ -258,7 +260,7 @@ age === 15
 
 ## We could write:
 
-let age = 15;
+let age = 12;
 let hasStudentId = true;
 
 age >= 13 && hasStudentId
